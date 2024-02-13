@@ -14,7 +14,7 @@ public class MyGame : Game
     bool isMenu = true;
 
 
-    public MyGame() : base(800, 600, false)     // Create a window that's 800x600 and NOT fullscreen
+    public MyGame() : base(800, 640, false)     // Create a window that's 800x600 and NOT fullscreen
 	{
         mainMenuSound = new Sound("MenuMusic.wav", true, false).Play();
         mainMenuSound.Volume = 0.4f;

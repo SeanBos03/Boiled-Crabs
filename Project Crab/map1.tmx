@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="150" height="60" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="221">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="150" height="60" tilewidth="32" tileheight="32" infinite="0" nextlayerid="20" nextobjectid="223">
  <editorsettings>
   <export target="GXPEngine - Project Gnome/GXPEngine/bin/Debug/map1.tmx" format="tmx"/>
  </editorsettings>
@@ -11,6 +11,9 @@
  </tileset>
  <tileset firstgid="12" name="Tileset" tilewidth="32" tileheight="32" tilecount="3072" columns="64">
   <image source="GXPEngine - Project Gnome/GXPEngine/bin/Debug/Tileset.png" width="2048" height="1536"/>
+ </tileset>
+ <tileset firstgid="3084" name="MenuBackgroundPlaceholder" tilewidth="900" tileheight="617" tilecount="1" columns="1">
+  <image source="GXPEngine - Project Gnome/GXPEngine/bin/Debug/MenuBackgroundPlaceholder.jpg" width="900" height="617"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" class="Tile" width="150" height="60">
   <data encoding="csv">
@@ -843,6 +846,7 @@
     <property name="p_isTrigger" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="222" gid="3084" x="795.455" y="1243.02" width="900" height="617"/>
  </objectgroup>
  <objectgroup id="11" name="Object Layer 2">
   <object id="31" name="TextCanvas" type="TextCanvas" x="2261.42" y="818.304" width="209.001" height="121.333">
