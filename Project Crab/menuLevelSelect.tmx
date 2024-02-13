@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="80" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="23">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="80" height="60" tilewidth="10" tileheight="10" infinite="0" nextlayerid="6" nextobjectid="24">
  <editorsettings>
-  <export target="../../CMGT GXP/GXP Projects/projects/GXPEngine - Project Gnome/GXPEngine/bin/Debug/menuLevelSelect.tmx" format="tmx"/>
+  <export target="GXPEngine - Project Gnome/GXPEngine/bin/Debug/menuLevelSelect.tmx" format="tmx"/>
  </editorsettings>
  <tileset firstgid="1" name="Button Look" tilewidth="470" tileheight="150" tilecount="1" columns="1">
   <image source="GXPEngine - Project Gnome/GXPEngine/bin/Debug/Button.png" width="470" height="150"/>
@@ -111,8 +111,16 @@
     <property name="parameter1String" value="mainMenu.tmx"/>
    </properties>
   </object>
+  <object id="23" type="Button" gid="1" x="219.835" y="511.585" width="86.33" height="72.83">
+   <properties>
+    <property name="f_theAction1" value="startGame"/>
+    <property name="f_theID" value="levelSelect"/>
+    <property name="parameter1Int" type="int" value="1"/>
+    <property name="parameter1String" value="crabMap1.tmx"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup id="4" name="Object Layer 3">
+ <objectgroup id="4" name="Object Layer 3" visible="0">
   <object id="3" x="0" y="1" width="800" height="135">
    <text fontfamily="Rockwell" pixelsize="60" wrap="1" color="#ffff00" halign="center" valign="center">Level Selected</text>
   </object>
@@ -126,5 +134,5 @@
    <text pixelsize="30" wrap="1" halign="center" valign="center">3</text>
   </object>
  </objectgroup>
- <objectgroup id="5" name="Object Layer 4"/>
+ <objectgroup id="5" name="Object Layer 4" visible="0"/>
 </map>

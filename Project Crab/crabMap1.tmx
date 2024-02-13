@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="2">
  <editorsettings>
   <export target="GXPEngine - Project Gnome/GXPEngine/bin/Debug/crabMap1.tmx" format="tmx"/>
  </editorsettings>
+ <tileset firstgid="1" name="Tileset" tilewidth="32" tileheight="32" tilecount="3072" columns="64">
+  <image source="GXPEngine - Project Gnome/GXPEngine/bin/Debug/Tileset.png" width="2048" height="1536"/>
+ </tileset>
+ <tileset firstgid="3073" name="playerSpritesheet" tilewidth="417" tileheight="600" tilecount="4" columns="4">
+  <image source="GXPEngine - Project Gnome/GXPEngine/bin/Debug/playerSpritesheet.png" width="1672" height="600"/>
+ </tileset>
  <layer id="1" name="Tile Layer 1" width="25" height="20">
+  <data encoding="csv">
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,855,855,855,855,855,0,0,0,0,0,0,0,0,0,855,855,855,855,855,914,0,0,
+0,0,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,0,0,
+0,0,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,914,0,0
+</data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="25" height="20">
+  <data encoding="csv">
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914,
+914,914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,914,914
+</data>
+ </layer>
+ <layer id="5" name="Tile Layer 3" width="25" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -27,4 +81,25 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="Player" type="Player" gid="3073" x="375.726" y="562.153" width="43.2155" height="83.6936">
+   <properties>
+    <property name="a_idleNumberOfFrames" type="int" value="2"/>
+    <property name="a_idleStartFrame" type="int" value="0"/>
+    <property name="a_jumpNumberOfFrames" type="int" value="1"/>
+    <property name="a_jumpStartFrame" type="int" value="1"/>
+    <property name="a_runNumberOfFrames" type="int" value="2"/>
+    <property name="a_runStartFrame" type="int" value="2"/>
+    <property name="f_theGroupID" value="Player"/>
+    <property name="f_theID" value="Player"/>
+    <property name="i_nextFrameDelay" type="int" value="30"/>
+    <property name="i_numberOfFrame" type="int" value="-1"/>
+    <property name="i_singleFrameID" type="int" value="-1"/>
+    <property name="i_textureKeepInCache" type="bool" value="false"/>
+    <property name="p_hasCollision" type="bool" value="true"/>
+    <property name="p_isTrigger" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="Object Layer 2"/>
 </map>

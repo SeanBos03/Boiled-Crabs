@@ -136,6 +136,23 @@
         "C:/Users/seanb/Downloads/Gnome Game/GXPEngine - Project Gnome/GXPEngine/bin/Debug/menuLevelSelect.tmx#arrow left": {
             "scaleInDock": 1
         },
+        "crabMap1.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 388.3333333333333,
+                "y": 430.3333333333333
+            }
+        },
+        "crabMap1.tmx#Tileset": {
+            "scaleInDock": 0.75
+        },
+        "crabMap1.tmx#playerSpritesheet": {
+            "scaleInDock": 1
+        },
         "crab_map1.tmx": {
             "scale": 1,
             "selectedLayer": 0,
@@ -164,14 +181,14 @@
         "introTextMenu.tmx": {
             "expandedObjectLayers": [
                 3,
-                4,
-                2
+                2,
+                4
             ],
             "scale": 0.75,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 539.9999999999999,
-                "y": 110
+                "x": 339.3333333333333,
+                "y": 254
             }
         },
         "introTextMenu.tmx#Button": {
@@ -185,11 +202,11 @@
                 2,
                 4
             ],
-            "scale": 1,
-            "selectedLayer": 0,
+            "scale": 2,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 458.5,
-                "y": 349.5
+                "x": 424.25,
+                "y": 368.75
             }
         },
         "levelCompletedMenu.tmx#Button": {
@@ -277,7 +294,7 @@
             "scale": 0.75,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 435.33333333333326,
+                "x": 488.66666666666663,
                 "y": 299.33333333333337
             }
         },
@@ -305,11 +322,11 @@
                 6,
                 11
             ],
-            "scale": 0.33,
+            "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 501.5151515151515,
-                "y": 410.6060606060606
+                "x": 574.5,
+                "y": 955.5
             }
         },
         "map1.tmx#DungeonCrawl_ProjectUtumnoTileset": {
@@ -345,8 +362,8 @@
             "scale": 0.75,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 2332.6666666666665,
-                "y": 958
+                "x": 2384.6666666666665,
+                "y": 956.6666666666666
             }
         },
         "map2.tmx#DungeonCrawl_ProjectUtumnoTileset": {
@@ -435,14 +452,14 @@
         "menuLevelSelect.tmx": {
             "expandedObjectLayers": [
                 3,
-                4,
-                2
+                2,
+                4
             ],
-            "scale": 0.75,
+            "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 603.9999999999999,
-                "y": 680.6666666666665
+                "x": 506.5,
+                "y": 400.5
             }
         },
         "menuLevelSelect.tmx#Button": {
@@ -500,7 +517,7 @@
     "tileset.lastUsedFilter": "All Files (*)",
     "tileset.spacing": 0,
     "tileset.tileSize": {
-        "height": 617,
-        "width": 900
+        "height": 32,
+        "width": 32
     }
 }

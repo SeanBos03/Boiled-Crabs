@@ -846,7 +846,7 @@
     <property name="p_isTrigger" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="222" gid="3084" x="795.455" y="1243.02" width="900" height="617"/>
+  <object id="222" gid="3084" x="953.03" y="1070.29" width="900" height="617"/>
  </objectgroup>
  <objectgroup id="11" name="Object Layer 2">
   <object id="31" name="TextCanvas" type="TextCanvas" x="2261.42" y="818.304" width="209.001" height="121.333">
