@@ -14,7 +14,6 @@ public static class GameData
     public static string theLevelName = "mainMenu.tmx"; //determine what level will be loaded
     public static Level theLevel; //the level object itself
     public static bool playerDead = false;
-    public static List<WaypointJump> wayPointJumpList = new List<WaypointJump>(); //waypoint that guide enemies to jump
 
     public static int LevelCurrentTime = 0; //the current time past after the level loaded in milliseconds
     public static decimal LevelCompleteTime = 0; //displaying the time past after the game loaded in second with 2 decimal point accuracy 
@@ -57,7 +56,6 @@ public static class GameData
         LevelCurrentTime = 0;
         levelCurrentScore = 0;
         theLevel = null;
-        wayPointJumpList.Clear();
         playerHealth = playerMaxHealth;
         playerDead = false;
         thePlayer = null;

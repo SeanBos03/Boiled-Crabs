@@ -47,19 +47,9 @@ public class SpriteCustom : Sprite
                 }
             }
 
-            if (theCollision is WaypointJump)
-            {
-                return 2;
-            }
-
             if (theCollision is Player)
             {
                 return 3;
-            }
-
-            if (theCollision is Enemy)
-            {
-                return 4;
             }
         }
         return 0;

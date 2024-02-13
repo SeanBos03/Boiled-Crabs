@@ -22,7 +22,7 @@ public class Player : Character
     bool ableToJump = true;
     int jumpTimer = Time.time;
 
-    public Player(string filenName, int rows, int columns, TiledObject obj = null) : base(filenName, rows, columns, obj)
+    public Player(string fileName, int rows, int columns, TiledObject obj = null) : base(fileName, rows, columns, obj)
     {
         idleStartFrame = obj.GetIntProperty("a_idleStartFrame", 0);
         idleAmountOfFrames = obj.GetIntProperty("a_idleNumberOfFrames", 0);

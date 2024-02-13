@@ -141,10 +141,10 @@
                 3
             ],
             "scale": 1.5,
-            "selectedLayer": 0,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 388.3333333333333,
-                "y": 430.3333333333333
+                "x": 372.3333333333333,
+                "y": 299.6666666666667
             }
         },
         "crabMap1.tmx#Tileset": {
@@ -325,7 +325,7 @@
             "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 574.5,
+                "x": 3742.5,
                 "y": 955.5
             }
         },
@@ -498,7 +498,7 @@
         "levelCompletedMenu.tmx"
     ],
     "project": "Project Gnome.tiled-project",
-    "property.type": "bool",
+    "property.type": "int",
     "recentFiles": [
         "crab_map1.tmx",
         "map3.tmx",

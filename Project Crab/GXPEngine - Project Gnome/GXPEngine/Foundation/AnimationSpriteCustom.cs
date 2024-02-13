@@ -127,24 +127,9 @@ public class AnimationSpriteCustom : AnimationSprite
                 }
             }
 
-            if (theCollision is WaypointJump)
-            {
-                return 2;
-            }
-
             if (theCollision is Player)
             {
                 return 3;
-            }
-
-            if (theCollision is Enemy)
-            {
-                return 4;
-            }
-
-            if (theCollision is EnemyBoss)
-            {
-                return 7;
             }
         }
         return 0;

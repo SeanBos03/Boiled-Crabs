@@ -38,23 +38,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\Behavior.cs" />
-    <Compile Include="Behaviors\BehaviorPatrol.cs" />
-    <Compile Include="Behaviors\BehaviorShooter.cs" />
-    <Compile Include="Gameobject\BossPlant.cs" />
-    <Compile Include="Gameobject\Bullet.cs" />
     <Compile Include="CustomUtil\CustomUtil.cs" />
-    <Compile Include="Gameobject\Door.cs" />
-    <Compile Include="Gameobject\Enemy.cs" />
     <Compile Include="Foundation\AnimationSpriteCustom.cs" />
     <Compile Include="Foundation\SpriteCustom.cs" />
     <Compile Include="GameData.cs" />
     <Compile Include="Gameobject\Character.cs" />
-    <Compile Include="Gameobject\EnemyBoss.cs" />
-    <Compile Include="Gameobject\PickupJumpSpeedUpgrade.cs" />
-    <Compile Include="Gameobject\PickUpCoin.cs" />
-    <Compile Include="Gameobject\PickupHealth.cs" />
-    <Compile Include="Gameobject\PickupSpeedUpgrade.cs" />
-    <Compile Include="Gameobject\Teleporter.cs" />
+    <Compile Include="Gameobject\Platform.cs" />
     <Compile Include="Gameobject\Tile.cs" />
     <Compile Include="GXPEngine\AddOns\Gizmos.cs" />
     <Compile Include="GXPEngine\AddOns\SpriteBatch.cs" />
@@ -99,7 +88,6 @@
     <Compile Include="GXPEngine\SoLoud\Soloud.cs" />
     <Compile Include="GXPEngine\SoLoud\SoloudSoundSystem.cs" />
     <Compile Include="Gameobject\Player.cs" />
-    <Compile Include="Gameobject\WaypointJump.cs" />
     <Compile Include="Region\Region.cs" />
     <Compile Include="Region\RegionActivateAtOnce.cs" />
     <Compile Include="TriggerAction\TriggerActionVisbilityTimed.cs" />

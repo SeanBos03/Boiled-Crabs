@@ -24,14 +24,6 @@ public class Level : GameObject
     int pickUpCheckTimer;
     int levelCompleteTimer = Time.time;
     const int PICKUPCHECKTIME = 15;
-    List<PickUpCoin> coinList = new List<PickUpCoin>();
-    List<Door> doorList = new List<Door>();
-    List<Teleporter> teleporterList = new List<Teleporter>();
-    List<PickupHealth> pickupHealthList = new List<PickupHealth>();
-    List<PickupSpeedUpgrade> pickupSpeedUpgradeList = new List<PickupSpeedUpgrade>();
-    List<PickupJumpSpeedUpgrade> pickupJumpSpeedUpgradeList = new List<PickupJumpSpeedUpgrade>();
-    List<BossPlant> bossPlantList = new List<BossPlant>();
-
 
     List<TriggerAction> triggerActionList = new List<TriggerAction>();
     public Level(string theMapfileName)
@@ -72,79 +64,6 @@ public class Level : GameObject
             GameData.thePlayer = thePlayer;
             thePlayer.setSpeed(GameData.playerSpeed);
             thePlayer.setJumpHeightAndSpeed(GameData.playerJumpHeightAndSpeed);
-            //increase player speed
-
-
-
-            //Extracting all the wayPointJump objects created so enemy can detect them
-            foreach (WaypointJump theWayPoint in FindObjectsOfType<WaypointJump>())
-            {
-                GameData.wayPointJumpList.Add(theWayPoint);
-            }
-
-
-            //Extracting all the coins so player can detect them
-            foreach (PickUpCoin theCoin in FindObjectsOfType<PickUpCoin>())
-            {
-                coinList.Add(theCoin);
-            }
-
-            //Extracting all the bossplant objects created so the player can detect them
-            foreach (BossPlant theBossPlant in FindObjectsOfType<BossPlant>())
-            {
-                bossPlantList.Add(theBossPlant);
-            }
-
-            //Extract PickupSpeedUpgrade
-            foreach (PickupSpeedUpgrade thePickupSpeedUpgrade in FindObjectsOfType<PickupSpeedUpgrade>())
-            {
-                if (GameData.speedUpgradeList[thePickupSpeedUpgrade.theIndex] == 1)
-                {
-                    pickupSpeedUpgradeList.Add(thePickupSpeedUpgrade);
-                }
-
-                else
-                {
-                    thePickupSpeedUpgrade.Destroy();
-                }
-            }
-
-            //Extract PickupJumpSpeedUpgrade
-            foreach (PickupJumpSpeedUpgrade thePickupJumpSpeedUpgrade in FindObjectsOfType<PickupJumpSpeedUpgrade>())
-            {
-                if (GameData.jumpUpgradeList[thePickupJumpSpeedUpgrade.theIndex] == 1)
-                {
-                    pickupJumpSpeedUpgradeList.Add(thePickupJumpSpeedUpgrade);
-                }
-
-                else
-                {
-                    thePickupJumpSpeedUpgrade.Destroy();
-                }
-            }
-
-            //Extract PickupHealth
-            foreach (PickupHealth theHealthPickup in FindObjectsOfType<PickupHealth>())
-            {
-                pickupHealthList.Add(theHealthPickup);
-            }
-
-            //Extracting all the Door objects created so the player can detect them
-            foreach (Door theDoor in FindObjectsOfType<Door>())
-            {
-                doorList.Add(theDoor);
-            }
-
-            //Extracting all the teleporter objects
-            foreach (Teleporter theTeleporter in FindObjectsOfType<Teleporter>())
-            {
-                if (theTeleporter.groupID == "teleporterPlayer")
-                {
-                    theTeleporter.theOwner = thePlayer;
-                }
-                teleporterList.Add(theTeleporter);
-            }
-
 
             //Manually create some of the game objects to make things working
             SpawnObjects(mapData);
@@ -281,16 +200,8 @@ public class Level : GameObject
         //Check if player touches a coin, enters a door, and other things. With some cooldown.
         if (Time.time - pickUpCheckTimer >= PICKUPCHECKTIME)
         {
-
-            CheckPlayerGetsCoin();
             pickUpCheckTimer = Time.time;
-            CheckDoors();
-            CheckTeleporters();
             CheckText(); //Updating the time passed and score got to game data
-            CheckPickupHealth();
-            CheckSpeedUpgradePickup();
-            CheckJumpSpeedUpgrade();
-            CheckBossPlant();
         }
 
         CheckTriggerAction();
@@ -403,123 +314,6 @@ public class Level : GameObject
         background.Freeze(); //Freeze all the background tiles by destroying the sprite and their collider. Creating better performance
     }
 
-    //Check if the player intersects with one of the coin(s), increase score is so
-    void CheckPlayerGetsCoin()
-    {
-        foreach (PickUpCoin thePickup in coinList)
-        {
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(thePickup, thePlayer))
-            {
-                GameData.levelCurrentScore += thePickup.GetScore();
-                thePickup.LateDestroy();
-                coinList.Remove(thePickup);
-                break;
-            }
-        }
-    }
-
-    //Check if the player intersects with one of the door(s), change level if so 
-    void CheckDoors()
-    {
-        foreach (Door theDoor in doorList)
-        {
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(theDoor, thePlayer))
-            {
-                thePlayer.Move(10000, 100000);
-                theDoor.ChangeLevel();
-                break;
-            }
-        }
-    }
-
-    //Check if the player intersects with one of the teleporter(s), move player position if so
-    void CheckTeleporters()
-    {
-        foreach (Teleporter theTeleporter in teleporterList)
-        {
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(theTeleporter, thePlayer))
-            {
-                switch (theTeleporter.theOwner.id)
-                {
-                    case "Player":
-                        thePlayer.SetXY(theTeleporter.teleportCroodX, theTeleporter.teleportCroodY);
-                        break;
-                }
-            }
-        }
-    }
-
-    //Check if the player intersects with one of the speed upgrades (blue book), increase player speed if so
-    void CheckSpeedUpgradePickup()
-    {
-        for (int i = 0; i < pickupSpeedUpgradeList.Count; i++)
-        {
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(pickupSpeedUpgradeList[i], thePlayer))
-            {
-                //speedUpgradeList tracks if the upgrade is picked up already
-                if (GameData.speedUpgradeList[pickupSpeedUpgradeList[i].theIndex] == 1)
-                {
-                    GameData.speedUpgradeList[pickupSpeedUpgradeList[i].theIndex] = 0;
-                    GameData.playerSpeed += pickupSpeedUpgradeList[i].theAmount;
-                    thePlayer.setSpeed(GameData.playerSpeed);
-
-                    if (textCanvasListHash.ContainsKey(pickupSpeedUpgradeList[i].theTextDisplay) == true)
-                    {
-                        triggerActionList.Add(new TriggerActionVisbilityTimed(textCanvasListHash[pickupSpeedUpgradeList[i].theTextDisplay],
-                            false, 3000));
-                    }
-
-                    pickupSpeedUpgradeList[i].Destroy();
-                    pickupSpeedUpgradeList.RemoveAt(i);
-                }
-            }
-        }
-    }
-
-    //Check if the player intersects with one of the jump height upgrades (brown book), increase player jump height if so
-    void CheckJumpSpeedUpgrade()
-    {
-        for (int i = 0; i < pickupJumpSpeedUpgradeList.Count; i++)
-        {
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(pickupJumpSpeedUpgradeList[i], thePlayer))
-            {
-                //jumpUpgradeList tracks if the upgrade is picked up already
-                if (GameData.jumpUpgradeList[pickupJumpSpeedUpgradeList[i].theIndex] == 1)
-                {
-                    GameData.jumpUpgradeList[pickupJumpSpeedUpgradeList[i].theIndex] = 0;
-                    GameData.playerJumpHeightAndSpeed += pickupJumpSpeedUpgradeList[i].theAmount;
-                    thePlayer.setJumpHeightAndSpeed(GameData.playerJumpHeightAndSpeed);
-
-                    if (textCanvasListHash.ContainsKey(pickupJumpSpeedUpgradeList[i].theTextDisplay) == true)
-                    {
-                        Console.WriteLine("add text");
-                        triggerActionList.Add(new TriggerActionVisbilityTimed(textCanvasListHash[pickupJumpSpeedUpgradeList[i].theTextDisplay],
-                            false, 3000));
-                    }
-
-                    pickupJumpSpeedUpgradeList[i].Destroy();
-                    pickupJumpSpeedUpgradeList.RemoveAt(i);
-                }
-            }
-        }
-    }
-
-    //Check if the player intersects with one of the health pickups, increase player health if player health is not at max
-    void CheckPickupHealth()
-    {
-        for (int i = 0; i < pickupHealthList.Count; i++)
-        {
-
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(pickupHealthList[i], thePlayer) &&
-                (GameData.playerHealth < GameData.playerMaxHealth))
-            {
-                pickupHealthList[i].GetHealth();
-                pickupHealthList[i].Destroy();
-                pickupHealthList.RemoveAt(i);
-            }
-        }
-    }
-
     //Updating the time passed and score to game data
     void CheckText()
     {
@@ -548,33 +342,6 @@ public class Level : GameObject
                 {
                     triggerActionList.Remove(theTriggerAction);
                     break;
-                }
-            }
-        }
-    }
-
-    //This is for level 3 boss fight only
-    //Check if the player intersects with one of the bossplants, decrease bossHealth if so
-    //Boss health checks the amount of plants collected. Upon level reset, bossHealth = 5
-    void CheckBossPlant()
-    {
-        for (int i = 0; i < bossPlantList.Count; i++)
-        {
-            if (CustomUtil.IntersectsSpriteCustomAndAnimationSpriteCustom(bossPlantList[i], thePlayer))
-            {
-                GameData.bossHealth -= bossPlantList[i].amountOfScore;
-                bossPlantList[i].Destroy();
-                bossPlantList.RemoveAt(i);
-
-                if (GameData.bossHealth <= 0)
-                {
-                    GameData.LevelCompleteTime = Math.Round(GameData.LevelCurrentTime / 1000.0m, 2);
-                    GameData.levelCompleteScore = GameData.levelCurrentScore;
-                    GameData.CheckNewLevelCleared();
-                    GameData.lastLevelPlayed = GameData.theLevelName;
-                    GameData.theLevelName = "levelCompletedMenuEnd.tmx";
-                    GameData.isMenu = true;
-                    GameData.playerDead = true;
                 }
             }
         }

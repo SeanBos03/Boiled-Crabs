@@ -16,7 +16,7 @@ public class Character : AnimationSpriteCustom
 {
     float theSpeed;
     float currentSpeedX;
-    float currentSpeedY;
+    float currentSpeedY; 
     protected bool canAllowTopJump = false; //Can jump to ceiling and keep jumping into the ceiling if holding jump (not working anymore)
     protected bool isJumping = false;
     float jumpHeightAndSpeed;
@@ -179,20 +179,6 @@ public class Character : AnimationSpriteCustom
     {
         switch (theName)
         {
-            case "patrol":
-                BehaviorPatrol newBehavior = new BehaviorPatrol(this, obj.GetIntProperty("f_idleActionTimerMin"), obj.GetIntProperty("f_idleActionTimerMax"),
-                    obj.GetIntProperty("f_DistanceRightMin"), obj.GetIntProperty("f_DistanceRightMax"), obj.GetIntProperty("f_DistanceLeftMin"),
-                    obj.GetIntProperty("f_DistanceLeftMax"), obj.GetIntProperty("f_walkActionPerformTime"));
-
-                AddBehavior(newBehavior);
-                break;
-            case "shooter":
-                BehaviorShooter newBehaviorShooter = new BehaviorShooter(GameData.thePlayer, this, obj.GetIntProperty("f_bulletDistance"), obj.GetIntProperty("f_shooterCooldownMin"),
-                    obj.GetIntProperty("f_shooterCooldownMax"), obj.GetIntProperty("f_bulletSpeed"), obj.GetFloatProperty("f_bulletImageScale"),
-                    obj.GetStringProperty("f_bulletFileName"), obj.GetIntProperty("f_bulletMoveTime"), obj.GetIntProperty("f_bulletOffSetX"),
-                    obj.GetIntProperty("f_bulletOffSetY"), obj.GetIntProperty("f_shooterDetectDistance"));
-                AddBehavior(newBehaviorShooter);
-                break;
         }
     }
 
