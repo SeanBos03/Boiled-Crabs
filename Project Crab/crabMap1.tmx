@@ -100,7 +100,7 @@
     <property name="p_isTrigger" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="2" name="Platform" type="Platform" gid="1097" x="-323.333" y="-61.9167" width="90.6667" height="19">
+  <object id="2" name="Platform" type="Platform" gid="1097" x="127.167" y="96.0833" width="145.667" height="33">
    <properties>
     <property name="f_theType" type="int" value="0"/>
     <property name="i_nextFrameDelay" type="int" value="30"/>
@@ -111,7 +111,7 @@
     <property name="i_textureKeepInCache" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="4" name="Plaform" type="Platform" gid="874" x="-309" y="31.3333" width="136.667" height="49.3333">
+  <object id="4" name="Plaform" type="Platform" gid="874" x="188.667" y="240.5" width="189.667" height="35.3333">
    <properties>
     <property name="f_theType" type="int" value="1"/>
     <property name="i_nextFrameDelay" type="int" value="30"/>

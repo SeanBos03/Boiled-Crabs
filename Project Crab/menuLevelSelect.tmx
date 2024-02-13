@@ -111,7 +111,7 @@
     <property name="parameter1String" value="mainMenu.tmx"/>
    </properties>
   </object>
-  <object id="23" type="Button" gid="1" x="219.835" y="511.585" width="86.33" height="72.83">
+  <object id="23" type="Button" gid="1" x="266.502" y="516.918" width="86.33" height="72.83">
    <properties>
     <property name="f_theAction1" value="startGame"/>
     <property name="f_theID" value="levelSelect"/>

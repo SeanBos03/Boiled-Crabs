@@ -140,11 +140,11 @@
             "expandedObjectLayers": [
                 3
             ],
-            "scale": 1.5,
+            "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 372.3333333333333,
-                "y": 299.6666666666667
+                "x": 773.5,
+                "y": 399.5
             }
         },
         "crabMap1.tmx#Tileset": {
@@ -322,11 +322,11 @@
                 6,
                 11
             ],
-            "scale": 1,
+            "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 3742.5,
-                "y": 955.5
+                "x": 3775,
+                "y": 1073
             }
         },
         "map1.tmx#DungeonCrawl_ProjectUtumnoTileset": {

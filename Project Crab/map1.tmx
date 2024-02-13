@@ -299,19 +299,6 @@
     <property name="p_isTrigger" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="167" name="Coin Pickup" type="PickUpCoin" gid="4" x="3652.74" y="925.348" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
   <object id="145" name="Player" type="Player" gid="8" x="585.947" y="1192" width="43.2155" height="83.6936">
    <properties>
     <property name="a_idleNumberOfFrames" type="int" value="2"/>
@@ -443,45 +430,6 @@
     <property name="f_nextLevelName" value="levelCompletedMenu.tmx"/>
    </properties>
   </object>
-  <object id="168" name="Coin Pickup" type="PickUpCoin" gid="4" x="4027.34" y="887.333" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="169" name="Coin Pickup" type="PickUpCoin" gid="4" x="4097.01" y="854" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="170" name="Coin Pickup" type="PickUpCoin" gid="4" x="4608.51" y="863.417" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
   <object id="171" name="Coin Pickup" type="PickUpCoin" gid="4" x="4481.59" y="1313.08" width="31.33" height="29">
    <properties>
     <property name="f_pickupScoreAmount" type="int" value="5"/>
@@ -574,45 +522,6 @@
    </properties>
   </object>
   <object id="189" name="Coin Pickup" type="PickUpCoin" gid="4" x="4637.42" y="1502.42" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="172" name="Coin Pickup" type="PickUpCoin" gid="4" x="4608.01" y="833.417" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="173" name="Coin Pickup" type="PickUpCoin" gid="4" x="4576.51" y="833.667" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="174" name="Coin Pickup" type="PickUpCoin" gid="4" x="4198.51" y="855" width="31.33" height="29">
    <properties>
     <property name="f_pickupScoreAmount" type="int" value="5"/>
     <property name="i_nextFrameDelay" type="int" value="5"/>
@@ -790,32 +699,6 @@
     <property name="p_isTrigger" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="202" name="Coin Pickup" type="PickUpCoin" gid="4" x="4576" y="862.833" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="203" name="Coin Pickup" type="PickUpCoin" gid="4" x="4542.34" y="862.5" width="31.33" height="29">
-   <properties>
-    <property name="f_pickupScoreAmount" type="int" value="5"/>
-    <property name="i_nextFrameDelay" type="int" value="5"/>
-    <property name="i_numberOfFrame" type="int" value="-1"/>
-    <property name="i_singleFrameID" type="int" value="-1"/>
-    <property name="i_startFrame" type="int" value="0"/>
-    <property name="i_startNumberOfFrames" type="int" value="8"/>
-    <property name="i_textureKeepInCache" type="bool" value="false"/>
-    <property name="p_hasCollision" type="bool" value="true"/>
-    <property name="p_isTrigger" type="bool" value="false"/>
-   </properties>
-  </object>
   <object id="204" name="PickupSpeedUpgrade" type="PickupSpeedUpgrade" gid="2875" x="4731.83" y="1534.25" width="32" height="32">
    <properties>
     <property name="f_theAmount" type="float" value="1"/>
@@ -846,7 +729,7 @@
     <property name="p_isTrigger" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="222" gid="3084" x="953.03" y="1070.29" width="900" height="617"/>
+  <object id="222" gid="3084" x="1241.03" y="682.288" width="900" height="617"/>
  </objectgroup>
  <objectgroup id="11" name="Object Layer 2">
   <object id="31" name="TextCanvas" type="TextCanvas" x="2261.42" y="818.304" width="209.001" height="121.333">
